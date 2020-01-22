@@ -36,4 +36,10 @@ def print_board(gb):
             else:
                 print(str(gb[i][j]) + ' ', end='')
 
-print_board(board)
+def find_empty(gb):
+    for i in range(len(gb)):
+        for j in range(len(gb[0])):
+            if gb[i][j] == 0:
+                return (i, j) # row, col
+
+print(print_board(board))
